@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Zodiac</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    
+	<h1 class="zodiac_title">Zodiac Sign</h1>
+	<hr class="hrline">
+	<hr class="hr1">
+	<hr class="hr2">
+	
+    <div class="bx1" id="box">
+			<h2>Enter Your Birthday !</h2>
+				<p class="in">Month: <input class="input_month" type="text" id="month" placeholder=" Number" min="1" max="12"></p>
+				<p class="in">Day:   <input class="input_day" type="text" id="day" placeholder=" Number" min="1" max="31"></p>
+			<button class="btn_generate" id="flip" type="button" onclick="zodiacsign()">GENERATE</button>
+	</div>
+
+	<div class="result_box">
+	
+		<p class="picture"id="pic"></p>
+		<p id="result" class="result1"></p>
+		<p id="meaning" class="result2"></p>
+	</div>
+</br>
+
+<script type="text/javascript">
+	function zodiacsign(){
+    var birthmonth = document.getElementById("month").value;
+    var birthday = document.getElementById("day").value;
+    var result = "Please Enter Birthdate ! ";
+
+    if (birthmonth == 1 && birthday >=20 || birthmonth == 2 && birthday <= 18){
+        result = ("AQUARIUS");
+        document.getElementById("pic").innerHTML = "<img src='aquarius.png' width=30%>";
+
+        document.getElementById("meaning").innerHTML="The 11th sign of the zodiac, Aquarius is represented by the Water Bearer, a symbol of the Gods bringing nourishment to Earth. People born under the Aquarius sign are said to be progressive, independent, intelligent, unique, and idealistic. Their elemental sign is air, the same as that for Gemini and Libra.";
+        }
+        
+        if (birthmonth == 2 && birthday >=19 || birthmonth == 3 && birthday <=20){
+            result = ("PISCES");
+            document.getElementById("pic").innerHTML = "<img src='pisces.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Pisces, a water sign, is the last constellation of the zodiac. It's symbolized by two fish swimming in opposite directions, representing the constant division of Pisces's attention between fantasy and reality. ... This makes these fish the most psychic, empathetic, and compassionate creatures of the astrological wheel.";
+        }
+
+        if (birthmonth == 3 && birthday >= 21 || birthmonth == 4 && birthday <=19){
+            result = ("ARIES");
+            document.getElementById("pic").innerHTML = "<img src='aries.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Like their fellow fire signs, Leo and Sagittarius, Aries is a passionate, motivated, and confident leader who builds community with their cheerful disposition and relentless determination. ... Aries is a cardinal sign that kicks off not only the spring season but also the entire zodiac wheel.";
+        
+        }
+
+        if (birthmonth == 4 && birthday >=20 || birthmonth == 5 && birthday <=20){
+            result = ("TAURUS");
+            document.getElementById("pic").innerHTML = "<img src='taurus.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Taurus is an earth sign represented by the bull. ... Taurus is ruled by Venus, the enchanting planet that governs love, beauty, and money. Taurus's Venusian influence make this earth sign the most sensual of the zodiac: These cosmic oxen are enchanted by any physical manifestation of comfort and luxury.";
+        }
+
+        if (birthmonth == 5 && birthday >=21 || birthmonth == 6 && birthday <=20){
+            result =("GEMINI");
+            document.getElementById("pic").innerHTML = "<img src='gemini.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Geminis are born between May 22 and June 22, and belong to the Air element of the zodiac (along with Libra and Aquarius). Air signs are smart, sharp and speedy; they THINK more than they feel, or do. Geminis are the liveliest of the Air sign gang - versatile, youthful, curious and fun.";
+        }
+
+        if (birthmonth == 6 && birthday >=21 || birthmonth == 7 && birthday <=22){
+            result =("CANCER");
+            document.getElementById("pic").innerHTML = "<img src='cancer.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Cancer is a cardinal water sign. Represented by the crab, this oceanic crustacean seamlessly weaves between the sea and shore, representing Cancer's ability to exist in both emotional and material realms. ... Cancer is ruled by the moon, the celestial body that represents comfort, self-care, and maternal energies.";
+        }
+
+        if (birthmonth == 7 && birthday >=23 || birthmonth == 8 && birthday <=22){
+            result=("LEO");
+            document.getElementById("pic").innerHTML = "<img src='leo.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Leo is represented by the lion, and these spirited fire signs are the kings and queens of the celestial jungle. They're delighted to embrace their royal status: Vivacious, theatrical, and passionate, Leos love to bask in the spotlight and celebrate themselves. ... (Fittingly, the Leo sign governs the heart.)";
+        }
+
+        if (birthmonth == 8 && birthday >=23 || birthmonth == 9 && birthday <=22){
+            result =("VIRGO");
+            document.getElementById("pic").innerHTML = "<img src='virgo.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Virgo is an earth sign historically represented by the goddess of wheat and agriculture, an association that speaks to Virgo's deep-rooted presence in the material world. Virgos are logical, practical, and systematic in their approach to life. ... Virgo is governed by Mercury, the messenger planet of communication.";
+        }
+        
+        if (birthmonth == 9 && birthday >=23 || birthmonth == 10 && birthday <=22){
+            result=("LIBRA");
+            document.getElementById("pic").innerHTML = "<img src='libra.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "With a symbol of the scales in the zodiac, the sign of Libra is the sign of justice, balance and harmony. That is why Libra's are natural peacekeepers. ... The seventh sign in the astrological zodiac, the Libra is also the only sign that is not represented by an animal.";
+        }
+
+        if (birthmonth == 10 && birthday >=23 || birthmonth == 11 && birthday <=21){
+            result =("SCORPIO");
+            document.getElementById("pic").innerHTML = "<img src='scorpio.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Because of its incredible passion and power, Scorpio is often mistaken for a fire sign. In fact, Scorpio is a water sign that derives its strength from the psychic, emotional realm. Like fellow water signs, Cancer and Pisces, Scorpio is extremely clairvoyant and intuitive.";
+        }
+
+        if (birthmonth == 11 && birthday >=22 || birthmonth == 12 && birthday <=21){
+            result=("SAGITTARIUS");
+            document.getElementById("pic").innerHTML = "<img src='sagittarius.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "Sagittarius is a mutable sign, meaning it is associated with adaptability and flexibility. This perfectly reflects the archers' deep-rooted desire for change. Sagittarians are born to explore and it is critical that these archers have the freedom to roam. ... With Sagittarius, it's always a wild ride.";
+        }
+        
+        if (birthmonth == 12 && birthday >=22 || birthmonth == 1 && birthday <=19){
+            result=("CAPRICORN");
+            document.getElementById("pic").innerHTML = "<img src='capricorn.png' width=30%>";
+            document.getElementById("meaning").innerHTML = "The last earth sign of the zodiac, Capricorn is represented by the sea goat, a mythological creature with the body of a goat and tail of a fish. ... Capricorns tap into their inner fortitude to overcome whatever stands between them and their long-term goals, and they don't let anything distract them from getting ahead.";
+        }
+
+        else if (birthmonth>12||birthday>31){
+            alert("Please Enter Accurate Date ! ");
+        }
+        
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+	
+	
+</script>   
+
+</body>
+
+</html>
+
